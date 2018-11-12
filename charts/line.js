@@ -3,13 +3,21 @@ Vue.component('line-chart', {
   props: ['data', 'options'],
   mounted () {
     var data = this.data || {
-      labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+      labels: ["AB","BC","MB","NB","NL","NS","NT","ON","PE","QC","SK","YT","NONE Specified"],
       datasets: [
         {
-          label: 'GitHub Commits',
+          label: 'Number of Victim',
           borderColor: '#9260c4',
           backgroundColor: 'transparent',
-          data: [40, 20, 10, 15, 17, 20, 25, 30, 40, 50, 50, 40]
+          data: [92,60,18,10,6,11,0,348,2,189,25,0,6],
+          yAxisID: 'A'
+        },
+        {
+          label: '$ loss',
+          borderColor: 'red',
+          backgroundColor: 'transparent',
+          data: [123329.58,44331.04,16918.27,8765.05,1550,4120,0,223692.22,0,116520.37,17046.26,0,11181],
+          yAxisID: 'B'
         }
       ]
     };
@@ -21,10 +29,10 @@ Vue.component('line-chart', {
       scales: {
         yAxes: [
           {
-            ticks: {
-              min: 0,
-              max: 60
-            }
+            id: 'A'
+          },
+          {
+            id: 'B'
           }
         ]
       }

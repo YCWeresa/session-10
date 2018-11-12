@@ -1,14 +1,14 @@
-Vue.component('doughnut-chart', {
+Vue.component('news', {
   extends: VueChartJs.Doughnut,
   props: ['data', 'options'],
   mounted () {
     var data = this.data || {
-      labels: ["Paris","Hauts-de-Seine","Yvelines","Seine-et-Marne", "Autres"],
+      labels: ["Ukraine conflict","Financial Crisis in Greece","Protests of Islam EGIDA movement ","Mediterranean Migrant Crisis "],
       datasets: [
         {
           label: 'Affaire de corruption en IDF par département',
-          backgroundColor: ['#54abab', '#9bd1d1', '#9bd1d1', '#9bd1d1', '#9bd1d1'],
-          data: [42 , 18 , 8 , 6 , 13],
+          backgroundColor: ['#54abab', '#9bd1d1', '#9bd1d1', '#9bd1d1'],
+          data: [3 , 3 , 4 , 2],
           datalabels: {
             align: 'center',
             anchor: 'center'
