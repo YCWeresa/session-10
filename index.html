@@ -2,6 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title></title>
+    <!-- Les fichiers CSS qui donnent un peu de style à notre page. Attention ce
+    fichier CSS est hebergé "ailleurs" est référencé avec un chemin absolu -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container my-10">
+      <h1><center>The Internet Race for Money</center></h1>
+      <div id="app">
+          <!-- Pour ajouter une photo à cette galerie il faut ajouter une
+          balise <slide> contenant une <img>. Chaque slide doit avoir
+          un index different. -->
+            <center><img src="Who is winning.jpg" /></center>
+      </div>
+      <br>
+      <div>
+        The Chinese mobile market is dominated by Alipay and Wechat Pay, which generate hundreds of millions active monthly user. In comparison, Apple Pay's 127 million global user base is not an apparent competitor. 
+        As France aims to attract 5 million by 2020, middle-class Chinese tourists who are ready to spend. French malls are racing to adapt the Chinese way of payment, trying to adopt the familiar way for Chinese tourists to spend. Let's see what are the public responses for mobile payment.    
+      </div>
+    </div>
+
+    <!-- Les fichiers javascript qui permettent au carousel de fonctionner. Ces
+    fichier JS sont référencés avec des chemins relatifs. Si vous devez les référencer
+    dans un fichier depuis un autre dossier, pensez à mettre à jour ces chemins. -->
+    <script src="vendors/vue.min.js"></script>
+    <script src="vendors/vue-carousel-3d.min.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+
+
+
+  <head>
+    <meta charset="utf-8">
     <title>Session 10</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
@@ -9,33 +43,35 @@
   <body>
     <div class="app container mt-5">
       <div class="row">
-        <div class="col-sm-6">
-          <h5>Canadian Anti-Fraud Centre</h5>
-          <p class="text-muted">Par etat(Source: Canada).</p>
-          <line-chart :height="200" class="mt-3 mb-5"></line-chart>
+        <div class="col-sm-6"> <img src="Mobile wallet .jpg" />
         </div>
 
         <div class="col-sm-6">
-          <h5>Afrique du Sud: 10 ans de hausse du braconnage</h5>
-          <p class="text-muted">Rhinoceros tués chaque année par le braconnage en Afrique du Sud (source: South African Government).</p>
+          <h5>Number of users of leading mobile payment platforms worldwide as of August 2017 (million)</h5>
+          <p class="text-muted">Mobile payment users around the world.</p>
           <bar-chart :height="200" class="mt-3 mb-5"></bar-chart>
         </div>
 
-        <div class="col-sm-12">
-          <h5>Le chômage aux Etats Unis</h5>
-          <p class="text-muted">Evolution du nombre de chômeurs inscrits à Pôle emploi depuis mai 2012 en France métropolitaine (source: Ministère du Travail).</p>
-          <multiline-chart :height="200" class="mt-3 mb-5"></multiline-chart>
+<div> 
+  2017 was an astonishing year for the Chinese mobile payment companies, mainly Alibaba who runs AliPay and Tencent who developed WeChat Pay. In 2017, $15.4 trillion worth of mobile payments were handled by third-party platforms in China—more than 40 times the amount processed in the US. Alipay, owned by Alibaba, handled nearly 54 percent of those payments, and WeChat Pay, owned by Tencent, processed around 39 percent.
+
+  Together, Alipay and WeChat Pay make up for 92% of the global mobile payment market.
+</div>
+        <div class="col-sm-12"><br>
+          <h5><center>Mobile Payments by Volume</center></h5>
+          <p class="text-muted"><center>Yearly Total in Billion USD</center></p>
+          <stacked-bar-chart :height="200" class="mt-3 mb-5"></stacked-bar-chart>
         </div>
 
         <div class="col-sm-6">
-          <h5>Olga, toujours au top</h5>
-          <p class="text-muted">Répartition du nombre de commits par étudiante (source: Pierre Romera).</p>
+          <h5>Payment methods in tourist attractions for the Chinese</h5>
+          <p class="text-muted">Percentage by payment method</p>
           <pie-chart :height="200" class="mt-3 mb-5"></pie-chart>
         </div>
 
         <div class="col-sm-6">
-          <h5>Trust in media</h5>
-          <p class="text-muted"> Trust in media in various cases (source: Transparency International)</p>
+          <h5>Are you concern about mobile app payment?</h5>
+          <p class="text-muted"> Chinese who are (not) concern about using mobile to make payment</p>
           <news :height="200" class="mt-3 mb-5"></news>
         </div>
       </div>
@@ -46,9 +82,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
-    <!-- Nos fichiers -->
+    <!-- Nos fichiers  -->
     <script src="charts/line.js"></script>
     <script src="charts/multiline.js"></script>
+    <script src="charts/stacked-bar.js"></script>
     <script src="charts/bar.js"></script>
     <script src="charts/pie.js"></script>
     <script src="charts/doughnut.js"></script>

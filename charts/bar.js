@@ -3,12 +3,12 @@ Vue.component('bar-chart', {
   props: ['data', 'options'],
   mounted () {
     var data = this.data || {
-      labels: [2007,2008,2009,2010,2011,2012,2013,2014,2015, 2016, 2017],
+      labels: ['WeChat Pay','AliPay','Paypal','ApplePay','Samsung Pay','Amazon Pay'],
       datasets: [
         {
-          label: 'Rhinoceros tués chaque année par le braconnage en Afrique du Sud',
+          label: 'Mobile payment users around the world',
           backgroundColor: '#f87979',
-          data: [13, null,122,333,448,668,1004,1215,749, 1143,1839],
+          data: [600,400,210,87,34,33],
           datalabels: {
             align: 'end',
             anchor: 'end'
@@ -26,7 +26,7 @@ Vue.component('bar-chart', {
       },
 			plugins: {
 				datalabels: {
-          display: true,
+          display: false,
 					color: '#c46060',
 					font: {
 						weight: 'bold'
@@ -37,7 +37,8 @@ Vue.component('bar-chart', {
       scales: {
         yAxes:  [
           {
-            display: false,
+            stacked: true,
+            display: true,
             ticks: {
               beginAtZero: true
             }
@@ -45,6 +46,7 @@ Vue.component('bar-chart', {
         ],
         xAxes: [
           {
+            stacked: true,
             categoryPercentage: 1,
             barPercentage: 2/3
           }

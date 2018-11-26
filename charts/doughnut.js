@@ -3,12 +3,12 @@ Vue.component('news', {
   props: ['data', 'options'],
   mounted () {
     var data = this.data || {
-      labels: ["Ukraine conflict","Financial Crisis in Greece","Protests of Islam EGIDA movement ","Mediterranean Migrant Crisis "],
+      labels: ["Calm and Not Concerned","Concerned", "Refusal"],
       datasets: [
         {
           label: 'Affaire de corruption en IDF par département',
-          backgroundColor: ['#54abab', '#9bd1d1', '#9bd1d1', '#9bd1d1'],
-          data: [3 , 3 , 4 , 2],
+          backgroundColor: ['#54abab', '#9bd1d1', "#00FFBF"],
+          data: [84, 12, 4],
           datalabels: {
             align: 'center',
             anchor: 'center'
